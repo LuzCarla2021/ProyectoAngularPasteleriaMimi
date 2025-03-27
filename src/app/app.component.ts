@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { SidebarService } from './sidebar.service';
 
 @Component({
   selector: 'app-root',
@@ -8,4 +9,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ProyectoAngularPasteleriaMimi';
+  isSidebarCollapsed = false;
+
+  constructor(private sidebarService: SidebarService) {
+    this.sidebarService.isCollapsed$.subscribe(isCollapsed => {
+      this.isSidebarCollapsed = isCollapsed;
+    });
+  }
 }

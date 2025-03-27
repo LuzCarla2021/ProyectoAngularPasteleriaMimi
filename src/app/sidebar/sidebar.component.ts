@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { SidebarService } from '../sidebar.service';
 
 @Component({
   selector: 'app-sidebar',
@@ -9,7 +10,13 @@ import { Component } from '@angular/core';
 export class SidebarComponent {
   isCollapsed = false;
 
+  constructor(private sidebarService: SidebarService) {
+    this.sidebarService.isCollapsed$.subscribe(isCollapsed => {
+      this.isCollapsed = isCollapsed;
+    });
+  }
+
   toggleSidebar() {
-    this.isCollapsed = !this.isCollapsed;
+    this.sidebarService.toggleSidebar();
   }
 }

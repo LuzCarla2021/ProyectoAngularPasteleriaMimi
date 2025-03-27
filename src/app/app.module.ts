@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { AppRoutingModule } from './app-routing.module'; // Importa este módulo
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { SidebarComponent } from './sidebar/sidebar.component';
+import { SidebarComponent } from './sidebar/sidebar.component'; // Importa el componente
 import { InicioComponent } from './pages/inicio/inicio.component';
 import { ProductosComponent } from './pages/productos/productos.component';
 import { VentasComponent } from './pages/ventas/ventas.component';
@@ -14,7 +14,7 @@ import { UsuariosComponent } from './pages/usuarios/usuarios.component';
 @NgModule({
   declarations: [
     AppComponent,
-    SidebarComponent,
+    SidebarComponent, // Asegúrate de incluirlo aquí
     InicioComponent,
     ProductosComponent,
     VentasComponent,
@@ -25,7 +25,7 @@ import { UsuariosComponent } from './pages/usuarios/usuarios.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule // Asegúrate de incluir esto aquí
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
