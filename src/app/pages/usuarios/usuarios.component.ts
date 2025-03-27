@@ -7,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrl: './usuarios.component.css'
 })
 export class UsuariosComponent {
-
+  users = [
+    { id: 1, name: 'Admin', email: 'admin@example.com', role: 'Administrador' },
+    { id: 2, name: 'Vendedor', email: 'vendedor@example.com', role: 'Vendedor' },
+    { id: 3, name: 'Repostero', email: 'repostero@example.com', role: 'Repostero' }
+  ];
 }
